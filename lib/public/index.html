@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles.css" rel="stylesheet" />
+    <title>Rose API-thecary</title>
+  </head>
+  <body>
+    <main class="p-4 w-1/2 m-auto">
+      <header id="header">
+        <img src="./rose.png" alt="rose" />
+        <h1 class="text-lg">Rose Api-thecary</h1>
+        <p class="text-xs">Locally Sourced, Hand-Crafted API</p>
+      </header>
+      <table class="table border-2 mt-4">
+        <thead class="table-header-group border-2">
+          <tr>
+            <th class="table-cell p-3">Route</th>
+            <th class="table-cell p-3">Method</th>
+            <th class="table-cell p-3 w-40">Description</th>
+            <th class="table-cell p-3">Example</th>
+          </tr>
+        </thead>
+        <tbody class="table-row-group">
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/episodes</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Gets a list of all episodes with nested quotes
+            </td>
+            <td class="table-cell p-3">
+              <a href="/episodes" target="_blank" class="text-blue-700"
+                >List Episodes</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/characters</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns a list of all characters with nested quotes from that
+              character
+            </td>
+            <td class="table-cell p-3">
+              <a href="/characters" target="_blank" class="text-blue-700"
+                >List Characters</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/quotes</pre></td>
+            <td class="table-cell p-3 text-center">POST</td>
+            <td class="table-cell p-3">Adds a new quote</td>
+            <td class="table-cell p-3">
+              <pre class="code">
+curl -d  '{"character_id": 3, "episode_id": 6,  "detail": "Okay, I have never heard someone say so many wrong things, one after the other, consecutively, in a row." }' -H 'Content-Type: application/json' 'https://alchemy-rose-api-thecary.herokuapp.com/quotes'
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
